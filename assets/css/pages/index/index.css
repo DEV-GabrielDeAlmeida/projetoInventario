@@ -1,0 +1,11 @@
+@import '../ativos/ativos.css';
+@import '../cadastro/cadastro.css';
+@import '../chamados/chamados.css';
+@import '../configuracoes/configuracoes.css';
+@import '../dashboard/dashboard.css';
+@import '../login/login.css';
+@import '../perfil/perfil.css';
+@import '../sobre/sobre.css';
+@import '../usuarios/usuarios.css';
+
+@import '../../global/global.css'
