@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHBOARD</title>
+    <link rel="stylesheet" href="../assets/css/pages/index/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="logo-page">
+            <a href="layout.html" id="logo">
+                <img src="../assets/img/pages/dashboard/PMC (1).png" width="190px" height="90px" alt="Início"
+                    title="Menu Principal">
+            </a>
+        </div>
+
+        <div>
+            <h2 class="title-page"> Papa inventário </h2>
+        </div>
+
+        <button id="openMenu">&#9776</button>
+
+        <div class="logo-profile">
+            <a href="#" id="profile-btn">
+                <i class="fa-regular fa-address-card fa-4x" title="Perfil"></i>
+            </a>
+        </div>
+
+    </header>
+
+    <nav id="menu">
+        <button id="closeMenu">X</button>
+        <a class="element selected" href="layout.html"><i class="fa-solid fa-chart-simple fa-xl"></i> DASHBOARD</a>
+        <a class="element" href="#"><i class="fa-solid fa-phone fa-xl"></i> CHAMADOS</a>
+        <a class="element" href="#"><i class="fa-solid fa-computer fa-xl"></i> ATIVOS</a>
+        <a class="element" href="#"><i class="fa-solid fa-users fa-xl"></i> USUÁRIOS</a>
+        <a class="element" href="#"><i class="fa-solid fa-gears fa-xl"></i> CONFIGURAÇÕES</a>
+        <a class="element" href="#"><i class="fa-solid fa-circle-info fa-xl"></i> SOBRE</a>
+    </nav>
+
+    <main>
+        <section>
+            <div class="title-cards">ESTATÍSTICA DE CHAMADOS DA SEMANA</div>
+            <!-- CARTÕES -->
+            <div class="cards">
+                <!-- CARD PENDENTE -->
+                <div class="box-cards">
+                    <div class="name-cards pend-card">Pendentes</div>
+                    <div class="content-cards">
+                        <p>6</p>
+                        <p style="font-size: 11px;">Últimos 7 dias.</p>
+                    </div>
+                </div>
+                <!-- CARD EM ABERTO -->
+                <div class="box-cards">
+                    <div class="name-cards open-card">Em aberto</div>
+                    <div class="content-cards">
+                        <p>8</p>
+                        <p style="font-size: 11px;">Últimos 7 dias.</p>
+                    </div>
+                </div>
+                <!-- CARD CONCLUÍDO -->
+                <div class="box-cards">
+                    <div class="name-cards finish-card">Concluídos</div>
+                    <div class="content-cards">
+                        <p>14</p>
+                        <p style="font-size: 11px;">Últimos 7 dias.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- separador -->
+            <hr class="hr-dashboard">
+
+            <!-- <div class="title-charts">
+                <h3>GRÁFICO DE CHAMADOS ÚLTIMOS 30 DIAS</h3>
+                <h3>GRÁFICO DE CHAMADOS ANUAL</h3>
+            </div> -->
+
+            <!-- GRÁFICOS 1 & 2-->
+            <div class="chartCard">
+                <div class="chartBoxBox">
+                    <h3 class="title-charts">GRÁFICO DE CHAMADOS ÚLTIMOS 30 DIAS</h3>
+                    <!-- gráfico de barra -->
+                    <div class="chartBox">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+                <div class="chartBoxBox">
+                    <h3 class="title-charts">GRÁFICO DE CHAMADOS ANUAL</h3>
+                    <!-- gráfico de linha -->
+                    <div class="chartBox">
+                        <canvas id="myChartLine"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- separador -->
+            <hr class="hr-dashboard">
+
+            <div class="title-charts">
+                <h3>GRÁFICO PROBLEMAS POR TIPO DE ATIVO</h3>
+            </div>
+            <div class="chartCard2">
+                <!-- gráfico de rosca -->
+                <div class="chartBox2">
+                    <canvas id="myChartDoughnut"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <aside>
+        <section>
+            <h1 class="title-aside">Chamados Rápidos</h1>
+            <hr class="hr-dashboard">
+            <ol class="olcards">
+                <li style="--cardColor:#fc374e">
+                    <div class="content">
+                        <div class="icon">❗</div>
+                        <div class="title">Pendentes</div>
+                        <div class="text">TECLADO | Expedição | Teclas com Defeito | 08:22 | 11/04/2024</div>
+                    </div>
+                </li>
+                <li style="--cardColor:#fc374e">
+                    <div class="content">
+                        <div class="icon">❗</div>
+                        <div class="title">Pendentes</div>
+                        <div class="text">MONITOR | Fiscal | Desligando Sozinho | 08:47 | 11/04/2024</div>
+                </li>
+                <li style="--cardColor:#DBE636">
+                    <div class="content">
+                        <div class="icon">📂</div>
+                        <div class="title">Em aberto</div>
+                        <div class="text">COMPUTADOR | Depósito | Não liga | 11:22 | 10/04/2024</div>
+                </li>
+                <li style="--cardColor:#36E642">
+                    <div class="content">
+                        <div class="icon">✅</div>
+                        <div class="title">Concluído</div>
+                        <div class="text">COMPUTADOR | Fiscal | Desligando Sozinho | 08:47 | 11/04/2024</div>
+                </li>
+            </ol>
+        </section>
+    </aside>
+
+    <footer>
+        <div class="footerBox">
+            <div>©2024. Todos os direitos reservados. Versão 1.0</div>
+            <div>Desenvolvido por: Papa Ti.</div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="../assets/js/pages/dashboard.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+    <script>
+        // BAR chart
+        // setup 
+        const data = {
+            labels: ['Chamados Este Mês'],
+            datasets: [{
+                label: 'Pendentes',
+                data: [7],
+                backgroundColor: 'rgb(255, 0, 0)',
+                borderColor: 'rgb(0, 0, 0)',
+                borderWidth: 1
+            },
+            {
+                label: 'Abertos',
+                data: [8],
+                backgroundColor: 'rgba(255, 193, 7)',
+                borderColor: 'rgb(0, 0, 0)',
+                borderWidth: 1
+            },
+            {
+                label: 'Concluídos',
+                data: [14],
+                backgroundColor: 'rgba(25, 134, 84)',
+                borderColor: 'rgb(0, 0, 0)',
+                borderWidth: 1
+            }
+            ]
+        };
+
+        // config 
+        const config = {
+            type: 'bar',
+            data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        // render init block
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+
+        // LINE chart
+        // setup
+        const showLegend = true;
+        const valoresPendente = [7, 4, 0, 0, 0];
+        const valoresAberto = [8, 3, 0, 0, 0];
+        const valoresConcluido = [14, 8, 0, 0, 0];
+        const labels = [
+            'Agosto',
+            'Setembro',
+            'Outubro',
+            'Novembro',
+            'Dezembro',
+        ];
+        const dataLine = {
+            labels: labels,
+            datasets: [{
+                label: 'Pendentes',
+                data: valoresPendente,
+                backgroundColor: 'rgba(255, 0, 0)',
+                borderColor: 'rgb(255, 0, 0)',
+                borderWidth: 1
+            },
+            {
+                label: 'Abertos',
+                data: valoresAberto,
+                fill: false,
+                backgroundColor: 'rgba(255, 193, 7)',
+                borderColor: 'rgb(255, 193, 7)',
+                tension: 0.1,
+                borderWidth: 1
+            }, {
+                label: 'Concluídos',
+                data: valoresConcluido,
+                fill: false,
+                backgroundColor: 'rgba(25, 134, 84)',
+                borderColor: 'rgba(25, 134, 84)',
+                tension: 0.1,
+                borderWidth: 1
+            }
+            ]
+        };
+
+        // config 
+        const configLine = {
+            type: 'line',
+            data: dataLine,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        // render init block
+        const myChartLine = new Chart(
+            document.getElementById('myChartLine'),
+            configLine
+        );
+
+        // DOUGHNUT chart
+        // setup 
+        const dataDoughnut = {
+            labels: ['ArCond', 'Teclado', 'Mouse', 'Impressora', 'Monitor', 'Cabo', 'Coletor', 'Leitores de Código'],
+            datasets: [{
+                label: 'Problemas Relacionados',
+                data: [18, 12, 6, 9, 12, 3, 9, 2],
+                backgroundColor: [
+                    'rgba(245,255,250.8)', // ArCond 
+                    'rgba(0, 0, 0, 0.8)', // Teclado
+                    'rgba(112,128,144, 0.8)', // Mouse
+                    'rgba(95,158,160, 0.8)', // Impressora
+                    'rgba(0,255,127, 0.8)', // Monitor
+                    'rgba(25,25,112, 0.8)', // Cabos
+                    'rgba(178,34,34, 0.8)', // Coletores
+                    'rgba(255,215,0, 0.8)', // Leitores
+                ],
+                borderColor: [
+                    'rgba(245,255,250, 1)',
+                    'rgba(0, 0, 0, 1)',
+                    'rgba(112,128,144, 1)',
+                    'rgba(95,158,160, 1)',
+                    'rgba(0,255,127, 1)',
+                    'rgba(25,25,112, 1)',
+                    'rgba(178,34,34, 1)',
+                    'rgba(255,215,0, 1)',
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        // config 
+        const configDoughnut = {
+            type: 'doughnut',
+            data: dataDoughnut,
+            options: {
+
+            }
+        };
+
+        // render init block
+        const myChartDoughnut = new Chart(
+            document.getElementById('myChartDoughnut'),
+            configDoughnut
+        );
+    </script>
+</body>
+
+</html>
