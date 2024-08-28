@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHAMADOS</title>
     <!-- <link rel="stylesheet" href="../assets/css/pages/index/index.css"> -->
-     <link rel="stylesheet" href="../assets/css/pages/chamados/chamados.css">
+    <link rel="stylesheet" href="../assets/css/pages/chamados/chamados.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,7 +15,7 @@
 <body>
     <header>
         <div class="logo-page">
-            <a href="layout.html" id="logo">
+            <a href="./dashboard.html" id="logo">
                 <img src="../assets/img/pages/dashboard/PMC (1).png" width="190px" height="90px" alt="Início"
                     title="Menu Principal">
             </a>
@@ -48,8 +48,32 @@
     <main>
         <section>
             <div class="table-box">
-                <table>
-                    <caption>Chamados</caption>
+                <table class="content-table">
+                    <div class="box-table-caption-chamados">
+                        <button class="novoChamadoButton">
+                            Novo Chamado
+                            <div class="iconButton">
+                                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                        fill="currentColor"></path>
+                                </svg>
+                            </div>
+                        </button>
+
+
+                        <h1 class="title-table">CHAMADOS</h1>
+
+                        <div class="custom_input">
+                            <svg viewBox="0 0 16 16" class="svg_icon bi-search" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
+                                </path>
+                            </svg>
+                            <input placeholder="Placeholder Text" type="text" class="input" />
+                        </div>
+                    </div>
                     <thead>
                         <tr>
                             <th>Ativo</th>
@@ -62,13 +86,87 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <td>Impressora LazerJet 1200W</td>
-                        <td>Sem tinta</td>
-                        <td>11/04/23 | 08:47</td>
-                        <td>11/04/23 | 09:34</td>
-                        <td>Thiago</td>
-                        <td>Em aberto</td>
-                        <td>Editar/Apagar</td>
+                        <tr>
+                            <td>Impressora LazerJet 1200W</td>
+                            <td>Sem tinta</td>
+                            <td>11/04/23 | 08:47</td>
+                            <td>11/04/23 | 09:34</td>
+                            <td>Thiago</td>
+                            <td>Em aberto</td>
+                            <td>Editar/Apagar</td>
+                        </tr>
+                        <tr>
+                            <td>Impressora LazerJet 1200W</td>
+                            <td>Sem tinta</td>
+                            <td>11/04/23 | 08:47</td>
+                            <td>11/04/23 | 09:34</td>
+                            <td>Thiago</td>
+                            <td>Em aberto</td>
+                            <td>Editar/Apagar</td>
+                        </tr>
+                        <tr>
+                            <td>Impressora LazerJet 1200W</td>
+                            <td>Sem tinta</td>
+                            <td>11/04/23 | 08:47</td>
+                            <td>11/04/23 | 09:34</td>
+                            <td>Thiago</td>
+                            <td>Em aberto</td>
+                            <td>Editar/Apagar</td>
+                        </tr>
+                        <tr>
+                            <td>Impressora LazerJet 1200W</td>
+                            <td>Sem tinta</td>
+                            <td>11/04/23 | 08:47</td>
+                            <td>11/04/23 | 09:34</td>
+                            <td>Thiago</td>
+                            <td>Em aberto</td>
+                            <td>Editar/Apagar</td>
+                        </tr>
+                        <tr>
+                            <td>Ar Condicionado Gree</td>
+                            <td>Controle Quebrado</td>
+                            <td>06/04/23 | 09:54</td>
+                            <td>08/04/23 | 11:23</td>
+                            <td>César</td>
+                            <td>Concluído</td>
+                            <td>Editar/Apagar</td>
+                        </tr>
+                        <tr>
+                            <td>Computador Depósito</td>
+                            <td>Não Liga</td>
+                            <td>05/04/23 | 08:47</td>
+                            <td>05/04/23 | 09:34</td>
+                            <td>Gabriel</td>
+                            <td>Concluído</td>
+                            <td>Editar/Apagar</td>
+                        </tr>
+                        <tr>
+                            <td>Impressora LazerJet 1200W</td>
+                            <td>Sem tinta</td>
+                            <td>11/04/23 | 08:47</td>
+                            <td>11/04/23 | 09:34</td>
+                            <td>Thiago</td>
+                            <td>Em aberto</td>
+                            <td>Editar/Apagar</td>
+                        </tr>
+                        <tr>
+                            <td>Impressora LazerJet 1200W</td>
+                            <td>Sem tinta</td>
+                            <td>11/04/23 | 08:47</td>
+                            <td>11/04/23 | 09:34</td>
+                            <td>Thiago</td>
+                            <td>Em aberto</td>
+                            <td>Editar/Apagar</td>
+                        </tr>
+                        <tr>
+                            <td>Impressora LazerJet 1200W</td>
+                            <td>Sem tinta</td>
+                            <td>11/04/23 | 08:47</td>
+                            <td>11/04/23 | 09:34</td>
+                            <td>Thiago</td>
+                            <td>Em aberto</td>
+                            <td>Editar/Apagar</td>
+                        </tr>
                     </tbody>
                     <tfoot></tfoot>
                 </table>
