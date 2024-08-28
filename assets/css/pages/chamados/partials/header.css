@@ -1,0 +1,62 @@
+header {
+    background: #e4ebf4;
+    display: flex;
+    flex: 1 1 100vw;
+    justify-content: space-between;
+    height: 100px;
+    border-bottom: solid 2px red;
+}
+
+.title-page {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+header #profile-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: gray;
+    transition: all 0.5s;
+}
+
+header #profile-btn:hover {
+    transform: scale(1.05);
+    color: red;
+}
+
+header #profile-btn:active {
+    transform: scale(0.95) rotate(1.7deg);
+}
+
+header #logo {
+    display: flex;
+    flex: 0 1 200px;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    margin-left: 10px;
+}
+
+#openMenu,
+#closeMenu {
+    border: none;
+    background: none;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0px 5px 0px 5px;
+    cursor: pointer;
+    display: none;
+}
+
+header div {
+    width: 190px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-profile {
+    justify-content: end;
+}

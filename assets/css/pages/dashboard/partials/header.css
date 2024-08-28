@@ -23,6 +23,7 @@ header #profile-btn {
 
 header #profile-btn:hover {
     transform: scale(1.05);
+    color: red;
 }
 
 header #profile-btn:active {

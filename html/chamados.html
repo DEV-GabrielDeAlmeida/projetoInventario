@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHAMADOS</title>
-    <link rel="stylesheet" href="../assets/css/pages/index/index.css">
+    <!-- <link rel="stylesheet" href="../assets/css/pages/index/index.css"> -->
+     <link rel="stylesheet" href="../assets/css/pages/chamados/chamados.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -36,8 +37,8 @@
 
     <nav id="menu">
         <button id="closeMenu">X</button>
-        <a class="element selected" href="./dashboard.html"><i class="fa-solid fa-chart-simple fa-xl"></i> DASHBOARD</a>
-        <a class="element" href="./chamados.html"><i class="fa-solid fa-phone fa-xl"></i> CHAMADOS</a>
+        <a class="element" href="./dashboard.html"><i class="fa-solid fa-chart-simple fa-xl"></i> DASHBOARD</a>
+        <a class="element selected" href="./chamados.html"><i class="fa-solid fa-phone fa-xl"></i> CHAMADOS</a>
         <a class="element" href="./ativos.html"><i class="fa-solid fa-computer fa-xl"></i> ATIVOS</a>
         <a class="element" href="./usuarios.html"><i class="fa-solid fa-users fa-xl"></i> USUÁRIOS</a>
         <a class="element" href="./configuracoes.html"><i class="fa-solid fa-gears fa-xl"></i> CONFIGURAÇÕES</a>
@@ -46,6 +47,32 @@
 
     <main>
         <section>
+            <div class="table-box">
+                <table>
+                    <caption>Chamados</caption>
+                    <thead>
+                        <tr>
+                            <th>Ativo</th>
+                            <th>Problema</th>
+                            <th>Dt/Hr Abertura</th>
+                            <th>Dt/Hr Término</th>
+                            <th>Responsável</th>
+                            <th>Situação</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <td>Impressora LazerJet 1200W</td>
+                        <td>Sem tinta</td>
+                        <td>11/04/23 | 08:47</td>
+                        <td>11/04/23 | 09:34</td>
+                        <td>Thiago</td>
+                        <td>Em aberto</td>
+                        <td>Editar/Apagar</td>
+                    </tbody>
+                    <tfoot></tfoot>
+                </table>
+            </div>
 
         </section>
     </main>
