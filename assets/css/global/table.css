@@ -41,3 +41,17 @@
 .content-table tbody tr:hover {    
     color: #E90611;
 }
+
+.tableAcoes{
+    text-align: center;
+}
+
+.tableEditIcon{
+    color: blue;
+    cursor: pointer;
+}
+
+.tableDleteIcon{
+    color: red;
+    cursor: pointer;
+}
