@@ -1,0 +1,150 @@
+main {
+    background: #e4ebf4;
+    display: flex;
+    flex: 20 1 500px;
+    height: calc(100vh - 174px);
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+main section {
+    /* width: 100%; */
+    width: 1900px;
+    height: 1200px;
+    margin: 10px;
+    /* background: #413e3e; */
+    background: #e4ebf4;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.table-box {
+    padding: 15px;
+}
+
+/* TABLE - CAPTION - Box*/
+.box-table-caption-chamados {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    padding: 5px;
+}
+
+/* TABLE - CAPTION - New Call Button */
+/* From Uiverse.io by d4niz */
+.novoChamadoButton {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    font-family: inherit;
+    padding: 0.45em;
+    padding-left: 1em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #e9e9e9;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3em;
+}
+
+.iconButton {
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #ffffff;
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+.novoChamadoButton:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em #c20f0f;
+    transition: all 0.15s;
+}
+
+.novoChamadoButton:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em #ffffff;
+    transition: all 0.2s;
+}
+
+/* TABLE - CAPTION - Caption */
+.box-table-caption-chamados h1 {
+    display: flex;
+    align-items: center;
+}
+
+
+/* TABLE - CAPTION - Search Button */
+/* From Uiverse.io by escannord */
+.input {
+    max-width: 190px;
+}
+
+.custom_input {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
+}
+
+.input {
+    font-size: 18px;
+    padding: 5px 10px;
+    width: 100%;
+    padding-left: 35px;
+    outline: none;
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #c4d1eb;
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px 0px #e2e2e2;
+    transition: 0.3s ease;
+}
+
+.input:focus {
+    background: #f2f2f2;
+    border: 1px solid #E90611;
+    border-radius: 10px;
+}
+
+.input::placeholder {
+    color: #dddddd;
+}
+
+.svg_icon {
+    position: absolute;
+    left: 10px;
+    fill: #E90611;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* TABLE - LEGENDS */
+.pendente {
+    color: #E90611;
+    font-weight: 700;
+}
+
+.emAberto {
+    color: rgb(255, 193, 7);
+    font-weight: 700;
+}
+
+.concluido {
+    color: rgb(25, 134, 84);
+    ;
+    font-weight: 700;
+}

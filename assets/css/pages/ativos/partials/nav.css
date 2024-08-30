@@ -1,0 +1,32 @@
+nav {
+    /* background: #111111; */
+    background: #e4ebf4;
+    display: flex;
+    flex: 1 1 200px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: -2px -1px 1px 0px #E90611;
+}
+
+nav a {
+    margin: 5%;
+    font-size: 13pt;
+}
+
+.element {
+    color: grey;
+    font-size: .8em;
+    padding: 6px 15px;
+    border-left: 2px solid grey;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: #E90611;
+    border-left: 2px solid #ff8b91;
+    color: azure;
+}
+
+.element:hover:not(.selected) {
+    color: #be2a31;
+}
