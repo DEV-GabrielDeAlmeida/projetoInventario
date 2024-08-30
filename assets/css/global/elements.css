@@ -8,10 +8,11 @@ a {
 .tooltip {
     position: relative;
     display: inline-block;
-    cursor: pointer;        
+    cursor: pointer;
 }
 
-.tooltip .tooltiptext {
+/* AZUL */
+.tooltip .tooltiptextBlue {
     visibility: hidden;
     width: 90px;
     background-color: #e4ebf4;
@@ -28,12 +29,12 @@ a {
     transition: opacity 0.3s;
 }
 
-.tooltip:hover .tooltiptext {
+.tooltip:hover .tooltiptextBlue {
     visibility: visible;
     opacity: 1;
 }
 
-.tooltip .tooltiptext::after {
+.tooltip .tooltiptextBlue::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -42,4 +43,63 @@ a {
     border-style: solid;
     border-color: #28282817 transparent transparent transparent;
     transform: translateX(-50%);
+}
+
+/* VERMELHO */
+.tooltip .tooltiptextRed {
+    visibility: hidden;
+    width: 110px;
+    background-color: #e4ebf4;
+    color: red;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: -100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptextRed {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip .tooltiptextRed::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 70%;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #28282817 transparent transparent transparent;
+    transform: translateX(-50%);
+}
+
+/* PERFIL */
+.tooltip .tooltiptextProfile {
+    visibility: hidden;
+    width: 210px;
+    max-height: 50px;
+    background-color: #e4ebf4;
+    color: red;
+    font-size: 21px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    z-index: -1;
+    bottom: 10%;
+    left: -160%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptextProfile {
+    visibility: visible;
+    opacity: 1;
 }
