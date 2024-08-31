@@ -75,14 +75,14 @@ main section {
 .open-card {
     display: flex;
     justify-content: center;
-    background-color: rgb(255, 193, 7);
+    background-color: rgb(255, 193, 7);    
     width: 100%;
 }
 
 .finish-card {
     display: flex;
     justify-content: center;
-    background-color: rgb(25, 134, 84);
+    background-color: rgb(0, 0, 255);    
     width: 100%;
 }
 
