@@ -40,8 +40,8 @@
     <nav id="menu">
         <button id="closeMenu">X</button>
         <a class="element" href="./dashboard.html"><i class="fa-solid fa-chart-simple fa-xl"></i> DASHBOARD</a>
-        <a class="element selected" href="./chamados.html"><i class="fa-solid fa-phone fa-xl"></i> CHAMADOS</a>
-        <a class="element" href="./ativos.html"><i class="fa-solid fa-computer fa-xl"></i> ATIVOS</a>
+        <a class="element" href="./chamados.html"><i class="fa-solid fa-phone fa-xl"></i> CHAMADOS</a>
+        <a class="element selected" href="./ativos.html"><i class="fa-solid fa-computer fa-xl"></i> ATIVOS</a>
         <a class="element" href="./usuarios.html"><i class="fa-solid fa-users fa-xl"></i> USUÁRIOS</a>
         <a class="element" href="./configuracoes.html"><i class="fa-solid fa-gears fa-xl"></i> CONFIGURAÇÕES</a>
         <a class="element" href="./sobre.html"><i class="fa-solid fa-circle-info fa-xl"></i> SOBRE</a>
@@ -53,7 +53,7 @@
                 <table class="content-table">
                     <div class="box-table-caption-chamados">
                         <button class="novoChamadoButton">
-                            Novo Chamado
+                            Adicionar Ativo
                             <div class="iconButton">
                                 <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0 0h24v24H0z" fill="none"></path>
@@ -78,25 +78,20 @@
                     </div>
                     <thead>
                         <tr>
-                            <th>Ativo</th>
+                            <th>Nome</th>
+                            <th>Tipo</th>
                             <th>Setor</th>
-                            <th>Problema</th>
-                            <th>Dt / Hr Abertura</th>
-                            <th>Dt / Hr Término</th>
-                            <th>Responsável</th>
-                            <th>Situação</th>
+                            <th>Status</th>
                             <th class="tableAcoes">Ações</th>
+                            <th class="qrCode">Gerar QrCode</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Teclado Letrom</td>
-                            <td>Expedição</td>
-                            <td>Teclas com defeito</td>
-                            <td>11/04/24 | 08:22</td>
-                            <td></td>
-                            <td>César</td>
-                            <td class="pendente">Pendente</td>
+                            <td>Ar Condicionado Gree 24.000 BTU</td>
+                            <td>Ar Condicionado</td>
+                            <td>Caixa</td>
+                            <td><input class="switch" type="checkbox" checked="true"></td>
                             <td class="tableAcoes">
                                 <a href="#">
                                     <i class="tooltip tableEditIcon far fa-edit edit-icon">
@@ -112,15 +107,13 @@
                                     </i>
                                 </a>
                             </td>
+                            <td class="qrCode">Gerar</td>
                         </tr>
                         <tr>
-                            <td>Monitor LG</td>
-                            <td>Fiscal</td>
-                            <td>Desligando Sozinho</td>
-                            <td>11/04/24 | 08:47</td>
-                            <td></td>
-                            <td>Gabriel</td>
-                            <td class="pendente">Pendente</td>
+                            <td>Ar Condicionado Gree 24.000 BTU</td>
+                            <td>Ar Condicionado</td>
+                            <td>Caixa</td>
+                            <td><input class="switch" type="checkbox" checked="true"></td>
                             <td class="tableAcoes">
                                 <a href="#">
                                     <i class="tooltip tableEditIcon far fa-edit edit-icon">
@@ -136,15 +129,13 @@
                                     </i>
                                 </a>
                             </td>
+                            <td class="qrCode">Gerar</td>
                         </tr>
                         <tr>
-                            <td>Computador</td>
-                            <td>Depósito</td>
-                            <td>Não liga</td>
-                            <td>10/04/24 | 11:22</td>
-                            <td></td>
-                            <td>Gabriel</td>
-                            <td class="emAberto">Em aberto</td>
+                            <td>Ar Condicionado Gree 24.000 BTU</td>
+                            <td>Ar Condicionado</td>
+                            <td>Caixa</td>
+                            <td><input class="switch" type="checkbox" checked="true"></td>
                             <td class="tableAcoes">
                                 <a href="#">
                                     <i class="tooltip tableEditIcon far fa-edit edit-icon">
@@ -160,15 +151,13 @@
                                     </i>
                                 </a>
                             </td>
+                            <td class="qrCode">Gerar</td>
                         </tr>
                         <tr>
-                            <td>Computador</td>
-                            <td>Fiscal</td>
-                            <td>Desligando Sozinho</td>
-                            <td>11/04/24 | 08:47</td>
-                            <td>11/04/24 | 09:54</td>
-                            <td>Gabriel</td>
-                            <td class="concluido">Concluído</td>
+                            <td>Ar Condicionado Gree 24.000 BTU</td>
+                            <td>Ar Condicionado</td>
+                            <td>Caixa</td>
+                            <td><input class="switch" type="checkbox" checked="true"></td>
                             <td class="tableAcoes">
                                 <a href="#">
                                     <i class="tooltip tableEditIcon far fa-edit edit-icon">
@@ -184,15 +173,13 @@
                                     </i>
                                 </a>
                             </td>
+                            <td class="qrCode">Gerar</td>
                         </tr>
                         <tr>
-                            <td>Ar Condicionado Gree</td>
-                            <td>Fiscal</td>
-                            <td>Controle Quebrado</td>
-                            <td>06/04/23 | 09:54</td>
-                            <td>08/04/23 | 11:23</td>
-                            <td>César</td>
-                            <td class="concluido">Concluído</td>
+                            <td>Ar Condicionado Gree 24.000 BTU</td>
+                            <td>Ar Condicionado</td>
+                            <td>Caixa</td>
+                            <td><input class="switch" type="checkbox" checked="true"></td>
                             <td class="tableAcoes">
                                 <a href="#">
                                     <i class="tooltip tableEditIcon far fa-edit edit-icon">
@@ -208,15 +195,13 @@
                                     </i>
                                 </a>
                             </td>
+                            <td class="qrCode">Gerar</td>
                         </tr>
                         <tr>
-                            <td>Computador Depósito</td>
-                            <td>Fiscal</td>
-                            <td>Não Liga</td>
-                            <td>05/04/23 | 08:47</td>
-                            <td>05/04/23 | 09:34</td>
-                            <td>Gabriel</td>
-                            <td class="concluido">Concluído</td>
+                            <td>Ar Condicionado Gree 24.000 BTU</td>
+                            <td>Ar Condicionado</td>
+                            <td>Caixa</td>
+                            <td><input class="switch" type="checkbox" checked="true"></td>
                             <td class="tableAcoes">
                                 <a href="#">
                                     <i class="tooltip tableEditIcon far fa-edit edit-icon">
@@ -232,15 +217,13 @@
                                     </i>
                                 </a>
                             </td>
+                            <td class="qrCode">Gerar</td>
                         </tr>
                         <tr>
-                            <td>Impressora LazerJet 1200W</td>
-                            <td>Fiscal</td>
-                            <td>Sem tinta</td>
-                            <td>11/04/23 | 08:47</td>
-                            <td>11/04/23 | 09:34</td>
-                            <td>Thiago</td>
-                            <td class="concluido">Concluído</td>
+                            <td>Ar Condicionado Gree 24.000 BTU</td>
+                            <td>Ar Condicionado</td>
+                            <td>Caixa</td>
+                            <td><input class="switch" type="checkbox" checked="true"></td>
                             <td class="tableAcoes">
                                 <a href="#">
                                     <i class="tooltip tableEditIcon far fa-edit edit-icon">
@@ -256,15 +239,13 @@
                                     </i>
                                 </a>
                             </td>
+                            <td class="qrCode">Gerar</td>
                         </tr>
                         <tr>
-                            <td>Impressora LazerJet 1200W</td>
-                            <td>Fiscal</td>
-                            <td>Sem tinta</td>
-                            <td>11/04/23 | 08:47</td>
-                            <td>11/04/23 | 09:34</td>
-                            <td>Thiago</td>
-                            <td class="concluido">Concluído</td>
+                            <td>Ar Condicionado Gree 24.000 BTU</td>
+                            <td>Ar Condicionado</td>
+                            <td>Caixa</td>
+                            <td><input class="switch" type="checkbox" checked="true"></td>
                             <td class="tableAcoes">
                                 <a href="#">
                                     <i class="tooltip tableEditIcon far fa-edit edit-icon">
@@ -280,15 +261,13 @@
                                     </i>
                                 </a>
                             </td>
+                            <td class="qrCode">Gerar</td>
                         </tr>
                         <tr>
-                            <td>Impressora LazerJet 1200W</td>
-                            <td>Fiscal</td>
-                            <td>Sem tinta</td>
-                            <td>11/04/23 | 08:47</td>
-                            <td>11/04/23 | 09:34</td>
-                            <td>Thiago</td>
-                            <td class="concluido">Concluído</td>
+                            <td>Ar Condicionado Gree 24.000 BTU</td>
+                            <td>Ar Condicionado</td>
+                            <td>Caixa</td>
+                            <td><input class="switch" type="checkbox" checked="true"></td>
                             <td class="tableAcoes">
                                 <a href="#">
                                     <i class="tooltip tableEditIcon far fa-edit edit-icon">
@@ -304,48 +283,16 @@
                                     </i>
                                 </a>
                             </td>
+                            <td class="qrCode">Gerar</td>
                         </tr>
                     </tbody>
                     <tfoot></tfoot>
                 </table>
             </div>
-
         </section>
     </main>
 
-    <!-- <aside>
-        <section>
-            <h1 class="title-aside">Chamados Rápidos</h1>
-            <hr class="hr-dashboard">
-            <ol class="olcards">
-                <li style="--cardColor:#fc374e">
-                    <div class="content">
-                        <div class="icon">❗</div>
-                        <div class="title">Pendentes</div>
-                        <div class="text">TECLADO | Expedição | Teclas com Defeito | 08:22 | 11/04/2024</div>
-                    </div>
-                </li>
-                <li style="--cardColor:#fc374e">
-                    <div class="content">
-                        <div class="icon">❗</div>
-                        <div class="title">Pendentes</div>
-                        <div class="text">MONITOR | Fiscal | Desligando Sozinho | 08:47 | 11/04/2024</div>
-                </li>
-                <li style="--cardColor:#DBE636">
-                    <div class="content">
-                        <div class="icon">📂</div>
-                        <div class="title">Em aberto</div>
-                        <div class="text">COMPUTADOR | Depósito | Não liga | 11:22 | 10/04/2024</div>
-                </li>
-                <li style="--cardColor:#36E642">
-                    <div class="content">
-                        <div class="icon">✅</div>
-                        <div class="title">Concluído</div>
-                        <div class="text">COMPUTADOR | Fiscal | Desligando Sozinho | 08:47 | 11/04/2024</div>
-                </li>
-            </ol>
-        </section>
-    </aside> -->
+    <!-- <aside></aside> -->
 
     <footer>
         <div class="footerBox">
