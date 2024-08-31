@@ -1,0 +1,155 @@
+@media only screen and (max-width:924px) {
+    main {
+        height: calc(100vh - 330px);
+    }
+
+    main section {
+        height: 1350px;
+    }
+
+    aside {
+        flex: 1 1 100vw;
+        height: 400px;
+    }
+
+    aside section {
+        width: 1200px;
+        height: 600px;
+    }
+
+
+    table {
+        width: 850px;
+        font-size: 18px;
+        font-size: 18px;
+    }
+
+    td {
+        padding: 10px;
+    }
+
+    .title-cards,
+    .title-charts {
+        font-size: 14px;
+    }
+
+    .title-aside {
+        display: flex;
+        justify-content: center;
+        color: grey;
+        font-weight: 900;
+    }
+
+    .chartCard {
+        flex-direction: column;
+        align-items: center;
+        height: 600px;
+    }
+}
+
+@media only screen and (max-width:718px) {
+    header {
+        border-bottom: none;
+    }
+
+    nav {
+        height: 100px;
+        box-shadow: none;
+    }
+
+    main {
+        height: calc(100vh - 436px);
+    }
+}
+
+@media only screen and (max-width:718px) {
+
+    header {
+        border-bottom: none;
+    }
+
+    main{
+        min-height: 1500px;
+        overflow:scroll
+    }
+
+    .logo-page,
+    .title-page,
+    .logo-profile {
+        display: flex;
+    }
+
+    .logo-profile {
+        display: none;
+    }
+
+    main {
+        height: calc(100vh - 212px);
+    }
+
+    main section {
+        height: 1500px;
+    }
+
+    aside {
+        display: none;
+        /* height: 100px; */
+    }
+
+    #openMenu,
+    #closeMenu {
+        display: block;
+    }
+
+    #openMenu {
+        margin-left: auto;
+    }
+
+    #closeMenu {
+        position: fixed;
+        right: 15px;
+        top: 15px;
+    }
+
+    .box-cards {
+        width: 150px;
+        height: 120px;
+    }
+
+    .chartBox {
+        width: 410px;
+        height: 260px;
+    }
+
+    nav {
+        position: fixed;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.9);
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        display: none;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    .title-cards,
+    .title-charts {
+        font-size: 18px;
+    }
+
+    .hr-dashboard {
+        margin-bottom: 10px;
+        margin-top: 50px;
+    }
+
+    .footerBox div {
+        font-size: 11px;
+    }
+
+    .title-page {
+        display: none;
+    }
+}
