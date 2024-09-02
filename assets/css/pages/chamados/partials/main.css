@@ -17,20 +17,7 @@ main section {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-.table-box{
-    padding: 15px;
-}
-
-/* TABLE - CAPTION - Box*/
-.box-table-caption-chamados {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 60px;
-    padding: 5px;
-}
-
-/* TABLE - CAPTION - New Active Button */
+/* TABLE - CAPTION - New Call Button */
 /* From Uiverse.io by d4niz */
 .novoChamadoButton {
     background: #ffffff;
@@ -79,27 +66,20 @@ main section {
     transition: all 0.2s;
 }
 
-/* TABLE - CAPTION - Caption */
-.box-table-caption-chamados h1 {
-    display: flex;
-    align-items: center;
-}
-
-
 /* TABLE - CAPTION - Search Button */
 /* From Uiverse.io by escannord */
-.input {
+.search {
     max-width: 190px;
 }
 
-.custom_input {
+.custom_search {
     display: flex;
     align-items: center;
     position: relative;
     max-width: 100%;
 }
 
-.input {
+.search {
     font-size: 18px;
     padding: 5px 10px;
     width: 100%;
@@ -113,17 +93,17 @@ main section {
     transition: 0.3s ease;
 }
 
-.input:focus {
+.search:focus {
     background: #f2f2f2;
     border: 1px solid #E90611;
     border-radius: 10px;
 }
 
-.input::placeholder {
+.search::placeholder {
     color: #dddddd;
 }
 
-.svg_icon {
+.search_icon {
     position: absolute;
     left: 10px;
     fill: #E90611;
