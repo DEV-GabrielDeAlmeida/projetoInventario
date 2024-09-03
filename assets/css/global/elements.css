@@ -86,7 +86,8 @@ a {
     max-height: 50px;
     background-color: #e4ebf4;
     color: red;
-    font-size: 21px;
+    /* font-size: 21px; */
+    font-size: var(--f3);
     text-align: center;
     border-radius: 5px;
     padding: 10px;

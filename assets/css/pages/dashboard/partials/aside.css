@@ -99,12 +99,14 @@ aside section {
 .olcards li .icon {
     grid-area: icon;
     align-self: center;
-    font-size: 2em;
+    /* font-size: 2em; */
+    font-size: var(--f4);
 }
 
 .olcards li .content .title {
     grid-area: title;
-    font-size: 1.25em;
+    /* font-size: 1.25em; */
+    font-size: var(--f1);
     font-weight: 700;
 }
 
