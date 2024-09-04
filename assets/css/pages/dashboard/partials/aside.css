@@ -44,7 +44,7 @@ aside section {
     /* background: #b1b1b1; */
     background: white;
     color: var(--cardColor);
-    font-size: 2em;
+    font-size: var(--f4);
     font-weight: 700;
     transform: translateY(calc(-1 * var(--labelOffset)));
     margin-right: calc(-1 * var(--labelOffset));
@@ -112,6 +112,7 @@ aside section {
 
 .olcards li .content .text {
     grid-area: text;
+    font-weight: bold;
 }
 
 div.icon {
