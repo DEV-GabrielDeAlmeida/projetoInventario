@@ -1,10 +1,16 @@
-.responsivePages {
+/* .responsivePages {
     @media only screen and (max-width:924px) {}
 
     @media only screen and (max-width:718px) {}
-}
+} */
 
 @media only screen and (max-width:924px) {
+    .responsivePage {
+        main {
+            height: calc(100vh - 150px);
+        }
+    }
+
     main {
         height: calc(100vh - 330px);
     }
@@ -26,12 +32,16 @@
 
     table {
         width: 850px;
-        font-size: 18px;
-        font-size: 18px;
+        /* font-size: 18px; */
+        /* font-size: 18px; */
     }
 
     td {
         padding: 10px;
+    }
+
+    .content-table {
+        font-size: var(--f1);
     }
 
     .title-cards,
@@ -157,5 +167,9 @@
 
     .title-page {
         display: none;
+    }
+
+    .content-table {
+        font-size: var(--f2);
     }
 }
