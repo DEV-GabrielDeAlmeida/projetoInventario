@@ -8,4 +8,11 @@
 @import '../sobre/sobre.css';
 @import '../usuarios/usuarios.css';
 
+@import './partials/aside.css';
+@import './partials/body.css';
+@import './partials/footer.css';
+@import './partials/header.css';
+@import './partials/main.css';
+@import './partials/nav.css';
+
 @import '../../global/global.css'
