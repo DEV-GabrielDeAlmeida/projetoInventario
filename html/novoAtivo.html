@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADICIONAR ATIVO</title>
+    <!-- <link rel="stylesheet" href="../assets/css/pages/index/index.css"> -->
+    <link rel="stylesheet" href="../assets/css/pages/novoAtivo/novoAtivo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="responsivePage">
+    <main>
+        <section>
+            <form class="form">
+                <p class="title">Novo Ativo </p>
+                <p class="message">Preencha os dados para cadastrar um novo ativo. </p>
+                <div class="flex">
+                    <!-- nome do ativo -->
+                    <label>
+                        <input required="" placeholder="" type="text" class="input">
+                        <span>Nome do Ativo</span>
+                    </label>
+
+                    <!-- tipos de ativo -->
+                    <label>
+                        <input required="" placeholder="" list="tiposAtivo" class="input">
+                        <span>Tipo de Ativo</span>
+                    </label>
+                    <datalist id="tiposAtivo">
+                        <option value="Ar-Condicionado"></option>
+                        <option value="Calculadora"></option>
+                        <option value="Coletor"></option>
+                        <option value="Computador"></option>
+                        <option value="Impressora"></option>
+                        <option value="Leitor de Código"></option>
+                        <option value="Monitor"></option>
+                        <option value="Mouse"></option>
+                        <option value="Nobreak"></option>
+                        <option value="Teclado"></option>
+                    </datalist>
+                </div>
+
+                <!-- setor -->
+                <label>
+                    <input required="" placeholder="" list="setores" class="input">
+                    <span>Setor</span>
+                </label>
+                <datalist id="setores">
+                    <option value="Atacado"></option>
+                    <option value="Caixa"></option>
+                    <option value="Caixa Rápido"></option>
+                    <option value="Depósito"></option>
+                    <option value="Escritório"></option>
+                    <option value="Expedição"></option>
+                    <option value="Financeiro"></option>
+                    <option value="Fiscal"></option>
+                    <option value="Galpão"></option>
+                    <option value="Loja"></option>
+                    <option value="Servidor"></option>
+                </datalist>
+
+                <!-- status -->
+                <label>
+                    <input required="" placeholder="" list="status" class="input">
+                    <span>Situação</span>
+                </label>
+                <datalist id="status">
+                    <option value="Ativo"></option>
+                    <option value="Inativo"></option>
+                </datalist>
+
+                <!-- descrição -->
+                <label class="message">Descrição do Ativo:</label>
+                <textarea name="descricaoAtivo" id="descricaoAtivo" class="input" cols="40" rows="4"></textarea>
+
+                <button class="submit">ADICIONAR</button>
+                <p class="signin"><a href="#">Cancelar</a></p>
+            </form>
+        </section>
+    </main>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
