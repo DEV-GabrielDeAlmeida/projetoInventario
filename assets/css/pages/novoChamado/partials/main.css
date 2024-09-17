@@ -27,13 +27,13 @@ main section {
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    min-width: 550px;
+    min-width: 500px;
     min-height: 100px;
     background-color: #fff;
-    padding: 30px;
+    padding: 20px;
     border-radius: 20px;
+    position: relative;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    /* position: relative; */
 }
 
 .title {
@@ -91,7 +91,7 @@ main section {
 .flex {
     display: flex;
     width: 100%;
-    gap: 100px;
+    gap: 6px;
 }
 
 .form label {
@@ -99,12 +99,18 @@ main section {
 }
 
 .form label .input {
+    font-size: var(--f3);
     width: 100%;
-    padding: 10px 10px 30px 10px;
+    padding: 10px 10px 20px 10px;
     outline: 0;
     border: 1px solid rgba(105, 105, 105, 0.397);
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;    
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     /* border-radius: 10px; */
+}
+
+.nameInput {
+    background-color: blue;
+    min-width: 320px;
 }
 
 .form textarea {
@@ -122,14 +128,16 @@ main section {
     left: 10px;
     top: 15px;
     color: grey;
-    font-size: 0.9em;
+    font-size: var(--f4);
     cursor: text;
     transition: 0.3s ease;
+    /* font-size: 0.9em; */
 }
 
 .form label .input:placeholder-shown+span {
     top: 15px;
-    font-size: 0.9em;
+    font-size: var(--f2);
+    /* font-size: 0.9em; */
 }
 
 .form label .input:focus+span,
@@ -155,7 +163,15 @@ main section {
 }
 
 .submit:hover {
-    background-color: rgb(194, 56, 56);
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em #391515;
+    transition: all 0.15s;
+}
+
+.submit:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em #ffffff;
+    transition: all 0.2s;
 }
 
 @keyframes pulse {
@@ -167,5 +183,27 @@ main section {
     to {
         transform: scale(1.8);
         opacity: 0;
+    }
+}
+
+@media only screen and (max-width:926px) {
+    main {        
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+
+    section {        
+        max-height: 95vh;
+    }
+}
+
+@media only screen and (max-width:718px) {
+    main {        
+        min-width: 100vw;
+        min-height: 100vh;        
+    }
+    
+    section {        
+        max-height: 600px;        
     }
 }

@@ -79,7 +79,15 @@
     </main>
 
     <script>
+        document.querySelector('.signin a').addEventListener('click', function (a) {
+            a.preventDefault();
 
+            const confirmation = confirm("Tem certeza que deseja cancelar a operação?");
+
+            if (confirmation) {
+                window.close();
+            }
+        });
     </script>
 </body>
 

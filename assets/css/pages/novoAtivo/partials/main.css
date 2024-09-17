@@ -163,7 +163,15 @@ main section {
 }
 
 .submit:hover {
-    background-color: rgb(194, 56, 56);
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em #391515;
+    transition: all 0.15s;
+}
+
+.submit:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em #ffffff;
+    transition: all 0.2s;
 }
 
 @keyframes pulse {
@@ -175,5 +183,27 @@ main section {
     to {
         transform: scale(1.8);
         opacity: 0;
+    }
+}
+
+@media only screen and (max-width:926px) {
+    main {
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+
+    section {
+        max-height: 95vh;
+    }
+}
+
+@media only screen and (max-width:718px) {
+    main {
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+
+    section {
+        max-height: 600px;
     }
 }

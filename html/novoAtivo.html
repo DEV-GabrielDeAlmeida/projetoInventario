@@ -17,66 +17,68 @@
         <section>
             <form class="form">
                 <p class="title">Novo Ativo </p>
-                <p class="message">Preencha os dados para cadastrar um novo ativo. </p>
-                <div class="flex">
-                    <!-- nome do ativo -->
-                    <label class="nameInput">
-                        <input required="" placeholder="" type="text" class="input">
-                        <span>Nome do Ativo</span>
-                    </label>
+                <p class="message">Preencha os dados para cadastrar um novo ativo. ⚙🛠</p>
 
-                    <!-- tipos de ativo -->
-                    <label class="typeInput">
-                        <input required="" placeholder="" list="tiposAtivo" class="input">
-                        <span>Tipo de Ativo</span>
+                <!-- nome do ativo -->
+                <label>
+                    <input required="" placeholder="" type="text" class="input">
+                    <span>Nome do Ativo</span>
+                </label>
+
+                <!-- tipos de ativo -->
+                <label>
+                    <input required="" placeholder="" list="tiposAtivo" class="input">
+                    <span>Tipo de Ativo</span>
+                </label>
+                <datalist id="tiposAtivo">
+                    <option value="Ar-Condicionado"></option>
+                    <option value="Calculadora"></option>
+                    <option value="Coletor"></option>
+                    <option value="Computador"></option>
+                    <option value="Impressora"></option>
+                    <option value="Leitor de Código"></option>
+                    <option value="Monitor"></option>
+                    <option value="Mouse"></option>
+                    <option value="Nobreak"></option>
+                    <option value="Teclado"></option>
+                </datalist>
+
+                <div class="flex">
+                    <!-- setor -->
+                    <label class="nameInput">
+                        <input required="" placeholder="" list="setores" class="input">
+                        <span>Setor</span>
                     </label>
-                    <datalist id="tiposAtivo">
-                        <option value="Ar-Condicionado"></option>
-                        <option value="Calculadora"></option>
-                        <option value="Coletor"></option>
-                        <option value="Computador"></option>
-                        <option value="Impressora"></option>
-                        <option value="Leitor de Código"></option>
-                        <option value="Monitor"></option>
-                        <option value="Mouse"></option>
-                        <option value="Nobreak"></option>
-                        <option value="Teclado"></option>
+                    <datalist id="setores">
+                        <option value="Atacado"></option>
+                        <option value="Caixa"></option>
+                        <option value="Caixa Rápido"></option>
+                        <option value="Depósito"></option>
+                        <option value="Escritório"></option>
+                        <option value="Expedição"></option>
+                        <option value="Financeiro"></option>
+                        <option value="Fiscal"></option>
+                        <option value="Galpão"></option>
+                        <option value="Loja"></option>
+                        <option value="Servidor"></option>
+                    </datalist>
+
+                    <!-- status -->
+                    <label>
+                        <input required="" placeholder="" list="status" class="input">
+                        <span>Situação</span>
+                    </label>
+                    <datalist id="status">
+                        <option value="Ativo"></option>
+                        <option value="Inativo"></option>
                     </datalist>
                 </div>
-
-                <!-- setor -->
-                <label>
-                    <input required="" placeholder="" list="setores" class="input">
-                    <span>Setor</span>
-                </label>
-                <datalist id="setores">
-                    <option value="Atacado"></option>
-                    <option value="Caixa"></option>
-                    <option value="Caixa Rápido"></option>
-                    <option value="Depósito"></option>
-                    <option value="Escritório"></option>
-                    <option value="Expedição"></option>
-                    <option value="Financeiro"></option>
-                    <option value="Fiscal"></option>
-                    <option value="Galpão"></option>
-                    <option value="Loja"></option>
-                    <option value="Servidor"></option>
-                </datalist>
-
-                <!-- status -->
-                <label>
-                    <input required="" placeholder="" list="status" class="input">
-                    <span>Situação</span>
-                </label>
-                <datalist id="status">
-                    <option value="Ativo"></option>
-                    <option value="Inativo"></option>
-                </datalist>
 
                 <!-- descrição -->
                 <label class="message">Descrição do Ativo:</label>
                 <textarea name="descricaoAtivo" id="descricaoAtivo" class="input" cols="40" rows="4"></textarea>
 
+                <!-- botões -->
                 <button class="submit">ADICIONAR</button>
                 <p class="signin"><a href="#">Cancelar</a></p>
             </form>
@@ -84,7 +86,15 @@
     </main>
 
     <script>
+        document.querySelector('.signin a').addEventListener('click', function (a) {
+            a.preventDefault();
 
+            const confirmation = confirm("Tem certeza que deseja cancelar a operação?");
+
+            if (confirmation) {
+                window.close();
+            }
+        });
     </script>
 </body>
 
