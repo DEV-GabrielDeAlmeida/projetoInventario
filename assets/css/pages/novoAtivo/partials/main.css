@@ -25,13 +25,15 @@ main section {
 .form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 10px;
-    max-width: 550px;
+    max-width: 500px;
+    min-height: 100px;
     background-color: #fff;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     position: relative;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .title {
@@ -89,7 +91,7 @@ main section {
 .flex {
     display: flex;
     width: 100%;
-    /* gap: 6px; */
+    gap: 6px;
 }
 
 .form label {
@@ -97,15 +99,7 @@ main section {
 }
 
 .form label .input {
-    width: 100%;
-    padding: 13px 13px 23px 13px;
-    outline: 0;
-    border: 1px solid rgba(105, 105, 105, 0.397);
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    /* border-radius: 10px; */
-}
-
-.form textarea {
+    font-size: var(--f3);
     width: 100%;
     padding: 10px 10px 20px 10px;
     outline: 0;
@@ -114,19 +108,36 @@ main section {
     /* border-radius: 10px; */
 }
 
+.nameInput {
+    background-color: blue;
+    min-width: 320px;
+}
+
+.form textarea {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    gap: 50px;
+    /* border-radius: 10px; */
+}
+
 .form label .input+span {
     position: absolute;
     left: 10px;
     top: 15px;
     color: grey;
-    font-size: 0.9em;
+    font-size: var(--f4);
     cursor: text;
     transition: 0.3s ease;
+    /* font-size: 0.9em; */
 }
 
 .form label .input:placeholder-shown+span {
     top: 15px;
-    font-size: 0.9em;
+    font-size: var(--f2);
+    /* font-size: 0.9em; */
 }
 
 .form label .input:focus+span,
