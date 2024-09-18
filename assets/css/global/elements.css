@@ -11,7 +11,7 @@ a {
     cursor: pointer;
 }
 
-/* AZUL */
+/* AZUL - EDITAR */
 .tooltip .tooltiptextBlue {
     visibility: hidden;
     width: 90px;
@@ -45,7 +45,7 @@ a {
     transform: translateX(-50%);
 }
 
-/* VERMELHO */
+/* VERMELHO - EXCLUIR */
 .tooltip .tooltiptextRed {
     visibility: hidden;
     width: 110px;
