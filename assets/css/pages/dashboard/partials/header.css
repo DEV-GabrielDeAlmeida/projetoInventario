@@ -11,6 +11,82 @@ header {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/* From Uiverse.io by JkHuger */
+.label-check {
+    display: none;
+}
+
+.hamburger-label {
+    width: 70px;
+    height: 58px;
+    display: block;
+    cursor: pointer;
+}
+
+.hamburger-label div {
+    width: 70px;
+    height: 6px;
+    background-color: grey;
+    position: absolute;
+}
+
+.line1 {
+    transition: all .3s;
+}
+
+.line2 {
+    margin: 18px 0 0 0;
+    transition: 0.3s;
+}
+
+.line3 {
+    margin: 36px 0 0 0;
+    transition: 0.3s;
+}
+
+#label-check:checked+.hamburger-label .line1 {
+    transform: rotate(35deg) scaleX(.55) translate(39px, -4.5px);
+    border-radius: 50px 50px 50px 0;
+}
+
+#label-check:checked+.hamburger-label .line3 {
+    transform: rotate(-35deg) scaleX(.55) translate(39px, 4.5px);
+    border-radius: 0 50px 50px 50px;
+}
+
+#label-check:checked+.hamburger-label .line2 {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    width: 45px;
+}
+/* From Uiverse.io by JkHuger */
+
+.profile-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 10px; */
+    width: 100px;
+    /* visibility: hidden; */
+    /* display: none; */
+}
+
+.options{
+    text-decoration: none;
+    list-style: inherit;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    display: none;
+}
+
+.test{
+    margin: 3px 0 10px;       
+}
+
+.logo-profile {
+    justify-content: end;    
+}
 
 header #profile-btn {
     display: flex;
@@ -55,8 +131,4 @@ header div {
     height: 100px;
     display: flex;
     align-items: center;
-}
-
-.logo-profile {
-    justify-content: end;
 }
