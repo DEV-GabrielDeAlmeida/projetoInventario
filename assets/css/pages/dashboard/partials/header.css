@@ -31,17 +31,17 @@ header {
 }
 
 .line1 {
-    transition: all .3s;
+    transition: all .6s;
 }
 
 .line2 {
     margin: 18px 0 0 0;
-    transition: 0.3s;
+    transition: 0.6s;
 }
 
 .line3 {
     margin: 36px 0 0 0;
-    transition: 0.3s;
+    transition: 0.6s;
 }
 
 #label-check:checked+.hamburger-label .line1 {
@@ -59,6 +59,7 @@ header {
     border-bottom-right-radius: 50px;
     width: 45px;
 }
+
 /* From Uiverse.io by JkHuger */
 
 .profile-menu {
@@ -69,42 +70,79 @@ header {
     width: 100px;
     /* visibility: hidden; */
     /* display: none; */
+    animation: slideIn 0.5s
 }
 
-.options{
+@keyframes slideIn {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100px);
+    }
+}
+
+.options {
     text-decoration: none;
     list-style: inherit;
     display: flex;
     flex-direction: column;
     visibility: hidden;
     display: none;
+    animation: fadeIn 0.8s;
 }
 
-.test{
-    margin: 3px 0 10px;       
+.options .hide {
+    animation: fadeOut 0.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.test {
+    margin: 3px 0 10px;
 }
 
 .logo-profile {
-    justify-content: end;    
+    justify-content: end;
+    transition: 0.7s;
 }
 
-header #profile-btn {
+/* header .profile-menu {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
     color: gray;
     transition: all 0.5s;
-}
+} */
 
-header #profile-btn:hover {
+/* .hamburger-label div :hover {
     transform: scale(1.05);
-    color: red;
+    background-color: red !important;
 }
 
-header #profile-btn:active {
+.hamburger-label div:active {
     transform: scale(0.95) rotate(1.7deg);
-}
+} */
 
 header #logo {
     display: flex;
