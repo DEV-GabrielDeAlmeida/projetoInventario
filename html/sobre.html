@@ -28,11 +28,22 @@
         <button id="openMenu">&#9776</button>
 
         <div class="logo-profile">
-            <a href="./perfil.html" id="profile-btn">
-                <i class="tooltip fa-regular fa-address-card fa-4x">
-                    <div class="tooltiptextProfile">Acessar Meu Perfil</div>
-                </i>
-            </a>
+
+            <!-- botão -->
+            <div class="profile-menu">
+                <input class="label-check" id="label-check" type="checkbox">
+                <label for="label-check" class="hamburger-label" id="profileButton">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                    <label></label>
+                </label>
+            </div>
+            <!-- opções -->
+            <div class="options" id="options">
+                <a href="./perfil.html" class="element test"><i class="fa-solid fa-user"></i> Meu Perfil</a>
+                <a href="../index.html" class="element test"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+            </div>
         </div>
 
     </header>
@@ -61,6 +72,7 @@
     </footer>
 
     <script type="text/javascript" src="../assets/js/openMenu.js"></script>
+    <script type="text/javascript" src="../assets/js/openHeader.js"></script>
 </body>
 
 </html>

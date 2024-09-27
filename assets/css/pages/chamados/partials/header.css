@@ -11,24 +11,142 @@ header {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/* From Uiverse.io by JkHuger */
+.label-check {
+    display: none;
+}
 
-header #profile-btn {
+.hamburger-label {
+    width: 70px;
+    height: 58px;
+    display: block;
+    cursor: pointer;
+}
+
+.hamburger-label div {
+    width: 70px;
+    height: 6px;
+    background-color: grey;
+    position: absolute;
+}
+
+.line1 {
+    transition: all .6s;
+}
+
+.line2 {
+    margin: 18px 0 0 0;
+    transition: 0.6s;
+}
+
+.line3 {
+    margin: 36px 0 0 0;
+    transition: 0.6s;
+}
+
+#label-check:checked+.hamburger-label .line1 {
+    transform: rotate(35deg) scaleX(.55) translate(39px, -4.5px);
+    border-radius: 50px 50px 50px 0;
+}
+
+#label-check:checked+.hamburger-label .line3 {
+    transform: rotate(-35deg) scaleX(.55) translate(39px, 4.5px);
+    border-radius: 0 50px 50px 50px;
+}
+
+#label-check:checked+.hamburger-label .line2 {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    width: 45px;
+}
+
+/* From Uiverse.io by JkHuger */
+
+.profile-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 10px; */
+    width: 100px;
+}
+
+.profile-menu:active {
+    /* animation: slideIn 1.8s ease-in-out;                                                                             */
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100px);
+    }
+}
+
+.options {
+    text-decoration: none;
+    list-style: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    visibility: hidden;
+    margin-left: 10px;
+    padding-top: 5px;
+    display: none;
+    animation: fadeIn 1.8s;
+}
+
+.options .hide {
+    animation: fadeOut 1.8s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.test {
+    margin: 3px 0 10px;
+}
+
+.logo-profile {
+    justify-content: end;
+    transition: 0.7s;
+}
+
+/* header .profile-menu {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
     color: gray;
     transition: all 0.5s;
-}
+} */
 
-header #profile-btn:hover {
+/* .hamburger-label div :hover {
     transform: scale(1.05);
-    color: red;
+    background-color: red !important;
 }
 
-header #profile-btn:active {
+.hamburger-label div:active {
     transform: scale(0.95) rotate(1.7deg);
-}
+} */
 
 header #logo {
     display: flex;
@@ -55,8 +173,4 @@ header div {
     height: 100px;
     display: flex;
     align-items: center;
-}
-
-.logo-profile {
-    justify-content: end;
 }
