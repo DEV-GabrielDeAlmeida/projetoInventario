@@ -17,3 +17,13 @@ const chamados = {
         { mes: 'Junho', pendentes: 20, abertos: 5, concluidos: 15 },
     ]
 }
+
+function novoChamado(status) {
+    if (status === 'pendentes') {
+        chamados.pendentes++;
+    } else if (status === 'aberto') {
+        chamados.abertos++;
+    } else if (status === 'concluido') {
+        chamados.concluidos++;
+    }
+}
