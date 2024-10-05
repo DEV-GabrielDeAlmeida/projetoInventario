@@ -1,86 +1,142 @@
+/* <div class="title-cards">ESTATÍSTICA DE CHAMADOS DA SEMANA</div>
+<!-- CARTÕES -->
+<div class="cards">
+    <!-- CARD PENDENTE -->
+    <div class="box-cards">
+        <div class="name-cards pend-card">Pendentes</div>
+        <div class="content-cards">
+            <p id="pendentes-card"></p>
+            <p style="font-size: 11px;">Últimos 7 dias.</p>
+        </div>
+    </div>
+    <!-- CARD EM ABERTO -->
+    <div class="box-cards">
+        <div class="name-cards open-card">Em aberto</div>
+        <div class="content-cards">
+            <p id="abertos-card"></p>
+            <p style="font-size: 11px;">Últimos 7 dias.</p>
+        </div>
+    </div>
+    <!-- CARD CONCLUÍDO -->
+    <div class="box-cards">
+        <div class="name-cards finish-card">Concluídos</div>
+        <div class="content-cards">
+            <p id="concluidos-card"></p>
+            <p style="font-size: 11px;">Últimos 7 dias.</p>
+        </div>
+    </div>
+</div> */
+
+// Controlar dados de chamados
 const chamados = {
-    pendentes: 0,
-    abertos: 0,
-    concluidos: 0,
-    historico: [
-        { data: '2023-07-01', pendentes: 10, abertos: 5, concluidos: 3 },
-        { data: '2023-07-02', pendentes: 8, abertos: 6, concluidos: 4 },
-        { data: '2023-07-03', pendentes: 3, abertos: 3, concluidos: 7 },
-        { data: '2023-07-04', pendentes: 0, abertos: 6, concluidos: 6 }
-    ],
-    anual: []
-}
+  semana: {
+    pendentes: 6,
+    abertos: 8,
+    concluidos: 14,
+  },
+  mensal: {
+    pendentes: 7,
+    abertos: 8,
+    concluidos: 14,
+  },
+  anual: {
+    pendentes: [7, 4, 0, 0, 0], // Pendentes por mês
+    abertos: [8, 3, 0, 0, 0], // Abertos por mês
+    concluidos: [14, 8, 0, 0, 0], // Concluídos por mês
+  },
+};
 
-function novoChamado(data, status) {
-    const dataFormatada = new Date(data);
-    const mes = dataFormatada.getMonth() + 1;
-    const ano = dataFormatada.getFullYear();
-    const chaveMes = `${ano}-${mes.toString().padStart(2, '0')}`;
+// Atualizar os cards
+document.getElementById("pendentes-card").textContent =
+  chamados.semana.pendentes;
+document.getElementById("abertos-card").textContent = chamados.semana.abertos;
+document.getElementById("concluidos-card").textContent =
+  chamados.semana.concluidos;
 
-    if (status === 'pendente') {
-        chamados.pendentes++;
-    } else if (status === 'aberto') {
-        chamados.abertos++;
-    } else if (status === 'concluido') {
-        chamados.concluidos++;
-    }
+// Gráfico Mensal (Chamados deste mês)
+const dataMensal = {
+  labels: ["Chamados Este Mês"],
+  datasets: [
+    {
+      label: "Pendentes",
+      data: [chamados.mensal.pendentes],
+      backgroundColor: "rgb(255, 0, 0)",
+      borderColor: "rgb(0, 0, 0)",
+      borderWidth: 1,
+    },
+    {
+      label: "Abertos",
+      data: [chamados.mensal.abertos],
+      backgroundColor: "rgba(255, 193, 7)",
+      borderColor: "rgb(0, 0, 0)",
+      borderWidth: 1,
+    },
+    {
+      label: "Concluídos",
+      data: [chamados.mensal.concluidos],
+      backgroundColor: "rgba(0, 0, 255)",
+      borderColor: "rgb(0, 0, 0)",
+      borderWidth: 1,
+    },
+  ],
+};
 
-    const registroHistorico = {
-        data: data,
-        pendentes: status === 'pendente' ? 1 : 0,
-        abertos: status === 'aberto' ? 1 : 0,
-        concluidos: status === 'concluido' ? 1 : 0
-    };
+const configMensal = {
+  type: "bar",
+  data: dataMensal,
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+  },
+};
 
-    chamados.historico.push(registroHistorico);
+const myChart = new Chart(document.getElementById("myChart"), configMensal);
 
-    atualizarAnual(chaveMes, status);
-}
+// Gráfico Anual (Pendentes, Abertos, Concluídos por mês)
+const labelsAnual = ["Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+const dataAnual = {
+  labels: labelsAnual,
+  datasets: [
+    {
+      label: "Pendentes",
+      data: chamados.anual.pendentes,
+      backgroundColor: "rgba(255, 0, 0)",
+      borderColor: "rgb(255, 0, 0)",
+      borderWidth: 1,
+    },
+    {
+      label: "Abertos",
+      data: chamados.anual.abertos,
+      backgroundColor: "rgba(255, 193, 7)",
+      borderColor: "rgb(255, 193, 7)",
+      borderWidth: 1,
+    },
+    {
+      label: "Concluídos",
+      data: chamados.anual.concluidos,
+      backgroundColor: "rgba(0, 0, 255)",
+      borderColor: "rgba(0, 0, 255)",
+      borderWidth: 1,
+    },
+  ],
+};
 
-function atualizarAnual(chaveMes, status) {
-    const mesNome = getMes(chaveMes.split('-')[1]);
+const configAnual = {
+  type: "line",
+  data: dataAnual,
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+  },
+};
 
-    const registroAnual = chamados.anual.find((registro) => registro.mes === mesNome);
-
-    if (registroAnual) {
-        if (status === 'pendente') {
-            registroAnual.pendentes++;
-        } else if (status === 'aberto') {
-            registroAnual.abertos++;
-        } else if (status === 'concluido') {
-            registroAnual.concluidos++;
-        }
-    } else {
-        const novoRegistroAnual = {
-            mes: mesNome,
-            pendentes: status === 'pendente' ? 1 : 0,
-            abertos: status === 'aberto' ? 1 : 0,
-            concluidos: status === 'concluido' ? 1 : 0
-        };
-
-        chamados.anual.push(novoRegistroAnual);
-    }
-}
-
-function getMes(mes) {
-    const meses = [
-        'Janeiro',
-        'Fevereiro',
-        'Março',
-        'Abril',
-        'Maio',
-        'Junho',
-        'Julho',
-        'Agosto',
-        'Setembro',
-        'Outubro',
-        'Novembro',
-        'Dezembro',
-    ];
-
-    return meses[mes - 1];
-}
-
-// Exemplo de uso:
-novoChamado('2023-07-05', 'pendente');
-console.log(chamados);
+const myChartLine = new Chart(
+  document.getElementById("myChartLine"),
+  configAnual
+);
