@@ -117,14 +117,35 @@ main section {
 .pendente {
     color: #E90611;
     font-weight: 700;
+    text-align: center;
+}
+
+.pendente span {
+    background-color: #e906116b;
+    padding: 2px 8px;
+    border-radius: 10px;
 }
 
 .emAberto {
-    color: rgb(255, 193, 7);
+    color: #765900;
     font-weight: 700;
+    text-align: center;
+}
+
+.emAberto span {
+    background-color: #ffb607;
+    padding: 2px 8px;
+    border-radius: 10px;
 }
 
 .concluido {
-    color: rgb(25, 134, 84);;
+    color: #0000ff;
     font-weight: 700;
+    text-align: center;
+}
+
+.concluido span {
+    background-color: #0000ff60;
+    padding: 2px 8px;
+    border-radius: 10px;
 }
