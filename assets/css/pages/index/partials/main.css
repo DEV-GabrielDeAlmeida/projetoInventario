@@ -1,10 +1,9 @@
 main {
     background: #e4ebf4;
     display: flex;
-    flex: 20 1 500px;
-    height: 100vh;
-    flex-wrap: wrap;
-    overflow: auto;
+    /* flex: 20 1 500px; */
+    height: 600px;
+    overflow: hidden;
 }
 
 main section {
@@ -14,10 +13,10 @@ main section {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 1900px;
-    height: 96vh;
+    width: 100%;
+    height: 580px;
     margin: 10px;
-    /* background: #413e3e; */
+    /* background: 413e3e; << darkMode*/
     background: #e4ebf4;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
@@ -218,4 +217,39 @@ main section {
 .toggle-right {
     right: 0;
     transform: translateX(0)
+}
+
+@media screen and (max-width: 924px) {
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 600px;
+    }
+
+    main section {
+        max-height: 500px;
+    }
+}
+
+@media screen and (max-width: 717px) {
+    main {
+        max-height: 600px;
+    }
+
+    main section {
+        max-height: 520px;
+    }
+
+    .toggle-container {
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        width: 100%;
+        height: 50%;
+        overflow: hidden;
+        transition: all 0.6s ease-in-out;
+        border-radius: 10px;
+        z-index: 1000;
+    }
 }

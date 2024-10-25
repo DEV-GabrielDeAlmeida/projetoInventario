@@ -17,7 +17,18 @@ main section {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
+.subtitle-page {
+    display: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+    font-size: var(--f4);
+    font-style: italic;
+    color: gray;
+}
+
 .title-cards {
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     font-weight: bold;
@@ -75,14 +86,14 @@ main section {
 .open-card {
     display: flex;
     justify-content: center;
-    background-color: rgb(255, 193, 7);    
+    background-color: rgb(255, 193, 7);
     width: 100%;
 }
 
 .finish-card {
     display: flex;
     justify-content: center;
-    background-color: rgb(0, 0, 255);    
+    background-color: rgb(0, 0, 255);
     width: 100%;
 }
 
@@ -96,9 +107,13 @@ main section {
 }
 
 .hr-dashboard {
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    width: 280px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 5px;
+    border-radius: 50px;
+    background-color: grey;
 }
 
 .title-charts {
@@ -148,4 +163,41 @@ main section {
     border: solid 0.4px #757575;
     background-color: rgb(236, 236, 236);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+@media screen and (max-width: 717px) {
+    main {
+        overflow: hidden;
+    }
+
+    main section {
+        overflow: hidden;
+        min-height: 1900px;
+    }
+
+    .subtitle-page {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cards {
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        margin: 20px;
+        align-items: center;
+        min-height: 450px;
+    }
+
+    .box-cards {
+        min-width: 300px;
+    }
+
+    .chartBox {
+        margin-bottom: 50px;
+    }
+
+    hr {
+        /* display: none; */
+    }
 }
